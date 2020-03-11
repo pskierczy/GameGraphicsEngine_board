@@ -27,7 +27,7 @@ public class SimpleNoise {
                 heightMap.keySet()) {
 
         }
-
+        return 0;
     }
 
 
