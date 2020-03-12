@@ -9,6 +9,7 @@ import java.util.List;
 
 public class HexFieldISO
         extends Polygon {
+    do not compile
     //       extends HexField {
     private double centerX, centerY, size, h, r, w;
     private List<Point> vertices;
