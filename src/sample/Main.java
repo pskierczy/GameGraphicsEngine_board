@@ -11,35 +11,36 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import ps.gamedev.Board.GameEngine;
 import ps.gamedev.Board.HexBoard;
 import ps.gamedev.Board.HexField;
 
 
-public class Main extends Application
-        implements EventHandler<KeyEvent> {
+public class Main extends Application {
 
-    Group graphics;
-    final int WIDTH = 800, HEIGHT = 800;
+    GameEngine gameEngine;
+    final int WIDTH = 800, HEIGHT = 600;
     final int gridSize = 20;
     final int WIDTH_GRID_NO = 20;
     final int HEIGHT_GRID_NO = 20;
     int rotationAngle = 0;
-    HexBoard hexBoard;
+//    HexBoard hexBoard;
+//    Group graphics;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        Group root = new Group();
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, WIDTH, HEIGHT));
-        primaryStage.show();
+        gameEngine=new GameEngine(WIDTH, HEIGHT);
+        gameEngine.show();
+        //primaryStage.show();
 
-        root.setFocusTraversable(true);
-        root.requestFocus();
-        root.setOnKeyPressed(this);
+
+//        root.setFocusTraversable(true);
+//        root.requestFocus();
+//        root.setOnKeyPressed(this);
 
         initGraphics();
-        root.getChildren().add(graphics);
+//        root.getChildren().add(graphics);
         //makeIso();
     }
 
@@ -49,21 +50,21 @@ public class Main extends Application
     }
 
     private void initGraphics() {
-        graphics = new Group();
-        graphics.setLayoutX(WIDTH / 2.0);
-        graphics.setLayoutY(HEIGHT / 2.0);
+//        graphics = new Group();
+//        graphics.setLayoutX(WIDTH / 2.0);
+//        graphics.setLayoutY(HEIGHT / 2.0);
 
-        hexBoard = new HexBoard(0, 0, 20, 60, 50, true);
-        graphics.getChildren().add(hexBoard);
+//        hexBoard = new HexBoard(0, 0, 20, 60, 50, true);
+//        graphics.getChildren().add(hexBoard);
     }
 
     private void makeIso() {
-        graphics.setRotate(rotationAngle);
-        graphics.setScaleY(0.5);
+//        graphics.setRotate(rotationAngle);
+//        graphics.setScaleY(0.5);
     }
 
     private void update() {
-        graphics.setRotate(rotationAngle);
+//        graphics.setRotate(rotationAngle);
     }
 
     public void handle(KeyEvent keyEvent) {

@@ -3,7 +3,6 @@ package ps.gamedev.Board;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
 public class HexBoard
         extends Group {
@@ -22,16 +21,16 @@ public class HexBoard
 
         if (DEBUG) {
             tClass = HexField_withText.class;
-            wSpacing = HexField.FlatUnitary().getW() * hexSize;
-            hSpacing = HexField.FlatUnitary().getH() * hexSize * 0.75;
+            wSpacing = HexField.FlatUnitary().getHexWidth() * hexSize;
+            hSpacing = HexField.FlatUnitary().getHexHeight() * hexSize * 0.75;
         } else if (isoView) {
             tClass = HexFieldISO.class;
             wSpacing = HexFieldISO.FlatUnitary().getW() * hexSize;
             hSpacing = HexFieldISO.FlatUnitary().getH() * hexSize * 0.75;
         } else {
             tClass = HexField.class;
-            wSpacing = HexField.FlatUnitary().getW() * hexSize;
-            hSpacing = HexField.FlatUnitary().getH() * hexSize * 0.75;
+            wSpacing = HexField.FlatUnitary().getHexWidth() * hexSize;
+            hSpacing = HexField.FlatUnitary().getHexWidth() * hexSize * 0.75;
         }
 
         double x0 = centerX - wSpacing * columns * 0.5;
