@@ -31,7 +31,7 @@ public class GameEngine
 
     private void initHexBoard(double centerX, double centerY, double hexSize, int rows, int cols, boolean isoView) {
         hexBoard = new HexBoard(centerX, centerY, hexSize, rows, cols, isoView);
-        this.graphicsEngine.getChildren().add(hexBoard);
+        //this.graphicsEngine.getChildren().add(hexBoard);
     }
 
     public GraphicsEngine getGraphicsEngine() {
